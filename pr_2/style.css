@@ -1,0 +1,125 @@
+.menu {
+    margin: 5px 0;
+    padding: 0;
+}
+
+h1,
+.menu li:first-child a {
+    color: white;
+    background: skyblue;
+}
+
+h1 {
+    padding: 1%;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 1% 2%;
+    text-decoration: none;
+    color: black;
+    border-radius: 0 1em;
+}
+
+.page {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.gallery {
+    overflow: hidden;
+}
+
+.gallery img {
+    float: left;
+    width: 24.6%;
+    margin: 0 0 0.5% 0.5%;
+}
+
+.gallery img:nth-child(5n + 1) {
+    width: 49.7%;
+}
+
+.gallery img:nth-child(3n + 1) {
+    clear: left;
+    margin-left: 0;
+}
+
+.content {
+    overflow: hidden;
+}
+
+.main {
+    float: left;
+    width: 67%;
+    padding-right: 2%;
+    border-right: 1px black solid;
+}
+
+.article {
+    overflow: hidden;
+    border: 1px black solid;
+}
+
+.article+.article {
+    margin-top: 1%;
+}
+
+.article div,
+.article img {
+    display: block;
+    float: left;
+    width: 34%;
+    margin: 1%;
+}
+
+.article img {
+    width: 24%;
+}
+
+.article:first-child p+p {
+    text-align: right;
+}
+
+.aside {
+    float: right;
+    width: 29%;
+}
+
+.item {
+    overflow: hidden;
+}
+
+.item div {
+    display: inline-block;
+    width: 63%;
+}
+
+.item img {
+    width: 30%;
+    float: right;
+    height: 100%;
+}
+
+.item h2,
+.item p:last-child {
+    text-align: right;
+}
+
+.footer {
+    margin-top: 1%;
+    padding: 1%;
+    text-align: center;
+    background: skyblue;
+}

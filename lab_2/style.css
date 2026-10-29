@@ -1,0 +1,35 @@
+.block {
+    width: 80%;
+    margin: 0 auto;
+    background: green;
+    overflow: hidden;
+}
+
+.item {
+    float: left;
+    background: white;
+    color: black;
+    margin: 1%;
+    padding: 1%;
+    width: 28%;
+}
+
+span {
+    font-weight: bold;
+}
+
+.right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    margin-left: 3%;
+}
+
+.wide {
+    width: 40%;
+}
