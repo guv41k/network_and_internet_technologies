@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Топ высотных зданий — лабораторная работа на Tailwind CSS</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body id="top">
+  <header class="bg-gray-100 border-b border-gray-200">
+    <nav class="max-w-7xl mx-auto flex flex-wrap items-center justify-between px-4 py-3" aria-label="Главное меню">
+      <h1>
+        <a class="text-xl font-semibold text-gray-800 hover:text-gray-600" href="#top">Топ высотных зданий</a>
+      </h1>
+
+      <input class="hidden peer" type="checkbox" id="menu-toggle">
+      <label class="md:hidden block cursor-pointer p-2 text-gray-600 hover:text-gray-900 border border-gray-300 rounded"
+        for="menu-toggle" aria-label="Показать или скрыть меню">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </label>
+
+      <div class="hidden peer-checked:block md:block w-full md:w-auto flex-grow">
+        <div class="md:flex md:items-center md:justify-between">
+          <ul class="flex flex-col gap-3 md:flex-row md:ml-6 mb-4 md:mb-0 mr-auto text-sm">
+            <li><a class="text-gray-700 hover:text-blue-600" href="#top">Главная</a></li>
+            <li><a class="text-gray-700 hover:text-blue-600" href="#buildings">Список зданий</a></li>
+            <li><a class="text-gray-400 pointer-events-none" role="link" aria-disabled="true">Контакты</a></li>
+          </ul>
+
+          <form class="flex space-x-2" role="search" action="#buildings">
+            <input class="w-full md:w-auto lg:w-48 px-3 py-1.5 border border-gray-300 rounded focus:outline-none focus:border-blue-500 text-sm"
+              type="search" size="14" placeholder="Найти" aria-label="Найти здание">
+            <button class="px-4 py-1.5 border border-green-600 text-green-600 rounded hover:bg-green-600 hover:text-white transition-colors text-sm"
+              type="submit">Найти</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 px-4 py-4 border-b border-gray-200"
+      aria-label="Галерея сооружений">
+      <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+        src="images/image1.jpg" width="200" height="200" alt="Арка «Врата на Запад»">
+      <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+        src="images/image2.jpg" width="200" height="200" alt="Сферическое здание с разноцветной подсветкой">
+      <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+        src="images/image3.jpg" width="200" height="200" alt="Высокая труба промышленного комплекса">
+      <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+        src="images/image4.jpg" width="200" height="200" alt="Небоскрёбы на фоне вечернего неба">
+      <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+        src="images/image5.JPG" width="200" height="200" alt="Высотное здание со шпилем">
+      <img class="w-full h-auto p-1 bg-white border border-gray-200 rounded"
+        src="images/image6.jpg" width="200" height="200" alt="Высокая мачта на фоне заката">
+    </section>
+
+    <section id="buildings" class="max-w-7xl mx-auto px-4" aria-label="Список зданий">
+      <article class="flex flex-col md:flex-row py-4 border-b border-gray-200">
+        <div class="md:w-3/4 mb-4 md:mb-0">
+          <h2 class="text-3xl font-medium text-gray-900 mb-2">
+            CN Tower, <span class="font-normal text-gray-500">Торонто, Канада</span>
+          </h2>
+          <div class="text-lg text-gray-600 leading-relaxed">
+            <p class="mb-2">
+              553,3-метровая телевизионная башня. Была самым высоким свободно стоящим сооружением в мире с 1976 по
+              2007 год. Является символом Торонто.
+            </p>
+            <p class="mb-2">
+              Земляные работы для сооружения железобетонной конструкции начались 12 февраля 1973 года, а уже
+              2 апреля 1975 года возведение башни было завершено.
+            </p>
+            <p class="mb-2">
+              Башня используется для телекоммуникационных нужд. На ней также находятся смотровые площадки и
+              вращающийся ресторан.
+            </p>
+            <p>На высоте 447 м находится самая высокая смотровая площадка башни.</p>
+          </div>
+        </div>
+        <div class="flex-grow md:w-6 px-4">
+          <img class="mx-auto max-w-full h-auto" src="images/image9.jpg" width="220" height="385" alt="Си-Эн Тауэр">
+        </div>
+      </article>
+
+      <article class="flex flex-col md:flex-row-reverse py-4 border-b border-gray-200">
+        <div class="md:w-3/4 mb-4 md:mb-0">
+          <h2 class="text-3xl font-medium text-gray-900 mb-2">
+            Бурдж-Халифа, <span class="font-normal text-gray-500">Дубай, ОАЭ</span>
+          </h2>
+          <div class="text-lg text-gray-600 leading-relaxed">
+            <p class="mb-2">Небоскрёб высотой 828 метров. Форма здания напоминает сталагмит.</p>
+            <p class="mb-2">
+              Строительство началось в 2004 году и шло со скоростью один-два этажа в неделю. После возведения
+              160-го этажа началась сборка 180-метрового шпиля из металлических конструкций.
+            </p>
+            <p>
+              Для башни разработали бетонную смесь, которую укладывали ночью. В жаркую погоду при приготовлении
+              смеси использовали лёд.
+            </p>
+          </div>
+        </div>
+        <div class="flex-grow md:w-6 px-4">
+          <img class="mx-auto max-w-full h-auto" src="images/image10.jpg" width="220" height="385" alt="Бурдж-Халифа">
+        </div>
+      </article>
+
+      <article class="flex flex-col md:flex-row py-4">
+        <div class="md:w-3/4 mb-4 md:mb-0">
+          <h2 class="text-3xl font-medium text-gray-900 mb-2">
+            Небесное дерево, <span class="font-normal text-gray-500">Токио, Япония</span>
+          </h2>
+          <div class="text-lg text-gray-600 leading-relaxed">
+            <p class="mb-2">
+              Телевизионная башня расположена в районе Сумида. Её высота вместе с антенной составляет 634 метра.
+              Цифры 6, 3 и 4 можно прочитать как «му», «са» и «си» — по названию исторической области Мусаси.
+            </p>
+            <p class="mb-2">
+              Башня напоминает пятиярусную пагоду. Её основание имеет форму треугольника, который постепенно
+              переходит в круг.
+            </p>
+            <p>Со смотровых площадок на высоте 350 и 450 метров открывается панорама Токио.</p>
+          </div>
+        </div>
+        <div class="flex-grow md:w-6 px-4">
+          <img class="mx-auto max-w-full h-auto" src="images/image11.JPG" width="220" height="385" alt="Токийское Небесное дерево">
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 border border-gray-200 px-4 py-4 text-center text-gray-600">
+    <p class="mb-2">Автор страницы: Гайнулин Арсений</p>
+    <address>
+      <a class="text-gray-700 hover:text-blue-600" href="mailto:arsenijgajnulin@gmail.com">arsenijgajnulin@gmail.com</a>
+    </address>
+  </footer>
+</body>
+
+</html>
